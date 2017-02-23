@@ -20,6 +20,7 @@
 		6A70652F1E3F8464005F3452 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70652E1E3F8464005F3452 /* FancyBtn.swift */; };
 		6A7065321E4E2835005F3452 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7065311E4E2835005F3452 /* FeedVC.swift */; };
 		6A7065341E57EC7E005F3452 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7065331E57EC7E005F3452 /* CircleView.swift */; };
+		6A7065361E59A2D9005F3452 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7065351E59A2D9005F3452 /* PostCell.swift */; };
 		79E459C98DDD7CB2B37F5143 /* Pods_devSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4A80EC3C70D9A8B8AF1F6E /* Pods_devSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		6A7065301E40EDD5005F3452 /* devSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = devSocial.entitlements; sourceTree = "<group>"; };
 		6A7065311E4E2835005F3452 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		6A7065331E57EC7E005F3452 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		6A7065351E59A2D9005F3452 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		7A4A80EC3C70D9A8B8AF1F6E /* Pods_devSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A4D76C1EEF65F081B1AD14 /* Pods-devSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devSocial/Pods-devSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		DC1F53C5639D6B4DC1F31ADE /* Pods-devSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-devSocial/Pods-devSocial.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				6A70652C1E3F82ED005F3452 /* FancyField.swift */,
 				6A70652E1E3F8464005F3452 /* FancyBtn.swift */,
 				6A7065331E57EC7E005F3452 /* CircleView.swift */,
+				6A7065351E59A2D9005F3452 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				6A7065261E3F7773005F3452 /* FancyView.swift in Sources */,
 				6A7065291E3F7831005F3452 /* Constants.swift in Sources */,
 				6A70652F1E3F8464005F3452 /* FancyBtn.swift in Sources */,
+				6A7065361E59A2D9005F3452 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
