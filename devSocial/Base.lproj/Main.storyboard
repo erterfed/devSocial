@@ -165,12 +165,16 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="idh-qi-eIl">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="nlB-Qx-LYW" customClass="CircleView" customModule="devSocial" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="nlB-Qx-LYW" customClass="CircleView" customModule="devSocial" customModuleProvider="target">
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="jZN-cq-tZo"/>
                                                     <constraint firstAttribute="height" constant="49" id="xbh-TF-6k0"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="S5X-4b-vpO" appends="YES" id="cZF-c6-fdg"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HsQ-Ee-SP7" customClass="FancyField" customModule="devSocial" customModuleProvider="target">
                                                 <nil key="textColor"/>
@@ -304,6 +308,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="nlB-Qx-LYW" id="cQG-KO-rYM"/>
                         <outlet property="tableView" destination="u2n-D5-cN0" id="ToI-1x-Vih"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="K9D-Ys-BTX"/>
                     </connections>
@@ -312,6 +317,11 @@
                 <tapGestureRecognizer id="pVg-cn-vki">
                     <connections>
                         <action selector="SignOutTapped:" destination="5Oz-wn-1V3" id="2hd-Wh-DaA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="S5X-4b-vpO">
+                    <connections>
+                        <action selector="addImageTapped:" destination="5Oz-wn-1V3" id="pfa-KQ-vHs"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
