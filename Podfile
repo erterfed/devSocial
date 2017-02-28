@@ -7,9 +7,9 @@ target 'devSocial' do
 
   # Pods for devSocial
   pod 'Firebase/Core'
-  pod ‘Firebase/Auth’
-  pod ‘Firebase/Database’
-  pod ‘Firebase/Storage’
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
 

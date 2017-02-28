@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostCell: UITableViewCell {
     
@@ -23,10 +24,54 @@ class PostCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(post: Post) {
+    //UIImage? = nil gives a default nil value if there's no image
+    func configureCell(post: Post, img: UIImage? = nil) {
         self.post = post
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
+        print("ert: imageUrl: \(post.imageUrl)")
+        if img != nil {
+            self.postImg.image = img
+        } else {
+            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+            ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print("ert: Unable to download image from Firebase storage")
+                } else {
+                    print("ert: Image downloaded from Firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData) {
+                            self.postImg.image = img
+                            FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                        }
+                    }
+                }
+            })
+        }
+        /*
+        if img != nil {
+            //if there's an image in the cache already, use it instead of downloading the image
+            self.postImg.image = img
+        } else {
+            //if image is not in cache, then download it and save into cache
+            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+            //restrict the size uses for storage
+            ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print("ert: Unable to download image from Firebase storage")
+                } else {
+                    print("ert: Image downloaded from Firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData) {
+                            self.postImg.image = img
+                            FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                        }
+                    }
+                }
+            } )
+                
+        }
+        */
         
     }
 
